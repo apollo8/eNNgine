@@ -5,7 +5,7 @@
 Perceptron::Perceptron(float threshold, std::vector<float> weights)
 {
   if (weights.size() == 0) {
-    throw "weights cannot be an empty list";
+    throw std::runtime_error("weights cannot be an empty list");
   }
 
   this->threshold = threshold;
@@ -21,7 +21,7 @@ short Perceptron::compute_output(std::vector<short> inputs)
 
   float weighted_sum = 0;
 
-  for (int i = 0; i < inputs.size(); i++) {
+  for (size_t i = 0; i < inputs.size(); i++) {
     weighted_sum = weighted_sum + (inputs.at(i) * weights.at(i));
   }
 
