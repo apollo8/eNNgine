@@ -13,3 +13,10 @@ include_directories("include")
 
 file(GLOB_RECURSE SRC_ENNGINE "src/*cpp")
 add_executable(enngine ${SRC_ENNGINE})
+
+# cppcheck target
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+add_custom_target(lint
+    cppcheck --enable=all --inconclusive --project=compile_commands.json)
