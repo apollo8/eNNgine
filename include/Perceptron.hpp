@@ -5,6 +5,8 @@
 #include <vector>
 #include <iostream>
 
+/* class definition */
+
 class Perceptron
 {
 private:
@@ -19,6 +21,10 @@ public:
   /* method: compute output */
   int compute(std::vector<int> inputs);
 };
+
+/* demo code */
+
+void run_perceptron_demo();
 
 #endif /* PERCEPTRON_HPP */
 
