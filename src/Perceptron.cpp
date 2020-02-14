@@ -13,17 +13,29 @@ Perceptron::Perceptron(float threshold, std::vector<float> weights)
 }
 
 /* compute output */
-short Perceptron::compute_output(std::vector<short> inputs)
+int Perceptron::compute(std::vector<int> inputs)
 {
+  /* validate input */
+
   if (inputs.size() != weights.size()) {
     throw std::runtime_error("wrong input size");
   }
+
+  for (int i : inputs) {
+    if (i != 0 && i != 1) {
+      throw std::runtime_error("inputs must be binary");
+    }
+  }
+
+  /* compute weighted sum */
 
   float weighted_sum = 0;
 
   for (size_t i = 0; i < inputs.size(); i++) {
     weighted_sum = weighted_sum + (inputs.at(i) * weights.at(i));
   }
+
+  /* fire iff weighted sum exceeds threshold */
 
   return weighted_sum > threshold ? 1 : 0;
 }

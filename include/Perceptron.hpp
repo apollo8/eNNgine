@@ -3,6 +3,7 @@
 #define PERCEPTRON_HPP
 
 #include <vector>
+#include <iostream>
 
 class Perceptron
 {
@@ -16,7 +17,7 @@ public:
   Perceptron(float threshold, std::vector<float> weights);
 
   /* method: compute output */
-  short compute_output(std::vector<short> inputs);
+  int compute(std::vector<int> inputs);
 };
 
 #endif /* PERCEPTRON_HPP */
