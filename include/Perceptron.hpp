@@ -5,8 +5,6 @@
 #include <vector>
 #include <iostream>
 
-/* class definition */
-
 class Perceptron
 {
 private:
@@ -23,7 +21,6 @@ public:
 };
 
 /* demo code */
-
 void run_perceptron_demo();
 
 #endif /* PERCEPTRON_HPP */
