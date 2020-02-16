@@ -39,7 +39,7 @@ float SigmoidNeuron::compute(std::vector<float> inputs)
 
   /* fire iff weighted sum exceeds threshold */
 
-  return (1 / (1 + std::exp(-(weighted_sum - bias))));
+  return (1 / (1 + std::exp(-(weighted_sum + bias))));
 }
 
 
