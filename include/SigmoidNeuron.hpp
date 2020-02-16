@@ -20,9 +20,5 @@ public:
   float compute(std::vector<float> inputs);
 };
 
-/* demo code */
-void search_for_not_gate_demo();
-void run_sigmoid_neuron_demo();
-
 #endif /* SIGMOIDNEURON_HPP */
 

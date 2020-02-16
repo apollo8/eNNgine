@@ -20,8 +20,5 @@ public:
   int compute(std::vector<int> inputs);
 };
 
-/* demo code */
-void run_perceptron_demo();
-
 #endif /* PERCEPTRON_HPP */
 
