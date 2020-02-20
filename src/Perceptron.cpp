@@ -5,39 +5,39 @@
 /* constructor */
 Perceptron::Perceptron(float threshold, vector<float> weights)
 {
-  if (weights.size() == 0) {
-    throw std::runtime_error("weights cannot be an empty list");
-  }
+    if (weights.size() == 0) {
+        throw std::runtime_error("weights cannot be an empty list");
+    }
 
-  this->threshold = threshold;
-  this->weights = weights;
+    this->threshold = threshold;
+    this->weights = weights;
 }
 
 /* compute output */
 int Perceptron::compute(vector<int> inputs)
 {
-  /* validate input */
+    /* validate input */
 
-  if (inputs.size() != weights.size()) {
-    throw std::runtime_error("wrong input size");
-  }
-
-  for (int i : inputs) {
-    if (i != 0 && i != 1) {
-      throw std::runtime_error("inputs must be binary");
+    if (inputs.size() != weights.size()) {
+        throw std::runtime_error("wrong input size");
     }
-  }
 
-  /* compute weighted sum */
+    for (int i : inputs) {
+        if (i != 0 && i != 1) {
+            throw std::runtime_error("inputs must be binary");
+        }
+    }
 
-  float weighted_sum = 0;
+    /* compute weighted sum */
 
-  for (size_t i = 0; i < inputs.size(); i++) {
-    weighted_sum = weighted_sum + (inputs.at(i) * weights.at(i));
-  }
+    float weighted_sum = 0;
 
-  /* fire iff weighted sum exceeds threshold */
+    for (size_t i = 0; i < inputs.size(); i++) {
+        weighted_sum = weighted_sum + (inputs.at(i) * weights.at(i));
+    }
 
-  return weighted_sum > threshold ? 1 : 0;
+    /* fire iff weighted sum exceeds threshold */
+
+    return weighted_sum > threshold ? 1 : 0;
 }
 

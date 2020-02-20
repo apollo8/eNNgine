@@ -10,16 +10,16 @@
 class Perceptron
 {
 private:
-  /* attributes */
-  vector<float> weights;
-  float threshold;
+    /* attributes */
+    vector<float> weights;
+    float threshold;
 
 public:
-  /* constructor */
-  Perceptron(float threshold, vector<float> weights);
+    /* constructor */
+    Perceptron(float threshold, vector<float> weights);
 
-  /* method: compute output */
-  int compute(vector<int> inputs);
+    /* method: compute output */
+    int compute(vector<int> inputs);
 };
 
 #endif /* PERCEPTRON_HPP */
