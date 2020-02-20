@@ -5,19 +5,21 @@
 #include <vector>
 #include <iostream>
 
+#include "types.hpp"
+
 class Perceptron
 {
 private:
   /* attributes */
-  std::vector<float> weights;
+  vector<float> weights;
   float threshold;
 
 public:
   /* constructor */
-  Perceptron(float threshold, std::vector<float> weights);
+  Perceptron(float threshold, vector<float> weights);
 
   /* method: compute output */
-  int compute(std::vector<int> inputs);
+  int compute(vector<int> inputs);
 };
 
 #endif /* PERCEPTRON_HPP */

@@ -2,9 +2,10 @@
 #include <cmath>
 
 #include "SigmoidNeuron.hpp"
+#include "types.hpp"
 
 /* constructor */
-SigmoidNeuron::SigmoidNeuron(float bias, std::vector<float> weights)
+SigmoidNeuron::SigmoidNeuron(float bias, vector<float> weights)
 {
   if (weights.size() == 0) {
     throw std::runtime_error("weights cannot be an empty list");
@@ -15,7 +16,7 @@ SigmoidNeuron::SigmoidNeuron(float bias, std::vector<float> weights)
 }
 
 /* compute output */
-float SigmoidNeuron::compute(std::vector<float> inputs)
+float SigmoidNeuron::compute(vector<float> inputs)
 {
   /* validate input */
 

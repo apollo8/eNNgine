@@ -5,19 +5,21 @@
 #include <vector>
 #include <iostream>
 
+#include "types.hpp"
+
 class SigmoidNeuron
 {
 private:
   /* attributes */
-  std::vector<float> weights;
+  vector<float> weights;
   float bias;
 
 public:
   /* constructor */
-  SigmoidNeuron(float bias, std::vector<float> weights);
+  SigmoidNeuron(float bias, vector<float> weights);
 
   /* method: compute output */
-  float compute(std::vector<float> inputs);
+  float compute(vector<float> inputs);
 };
 
 #endif /* SIGMOIDNEURON_HPP */

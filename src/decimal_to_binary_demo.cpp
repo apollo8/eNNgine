@@ -1,6 +1,8 @@
 
 #include "SigmoidNeuron.hpp"
 #include "demos.hpp"
+#include "types.hpp"
+
 
 void convert_decimal_to_binary_demo()
 {
@@ -32,7 +34,7 @@ void convert_decimal_to_binary_demo()
   // float-to-binary normalization
   auto normalize = [](float f){ return f > 0.5 ? 1 : 0; };
 
-  std::vector<float> inputs {0.99, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001};
+  vector<float> inputs {0.99, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001};
   std::cout << "0: " << normalize(b4.compute(inputs)) << normalize(b3.compute(inputs))
                      << normalize(b2.compute(inputs)) << normalize(b1.compute(inputs)) << std::endl;
 

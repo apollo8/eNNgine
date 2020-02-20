@@ -1,8 +1,9 @@
 
 #include "Perceptron.hpp"
+#include "types.hpp"
 
 /* constructor */
-Perceptron::Perceptron(float threshold, std::vector<float> weights)
+Perceptron::Perceptron(float threshold, vector<float> weights)
 {
   if (weights.size() == 0) {
     throw std::runtime_error("weights cannot be an empty list");
@@ -13,7 +14,7 @@ Perceptron::Perceptron(float threshold, std::vector<float> weights)
 }
 
 /* compute output */
-int Perceptron::compute(std::vector<int> inputs)
+int Perceptron::compute(vector<int> inputs)
 {
   /* validate input */
 
